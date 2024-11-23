@@ -1,12 +1,17 @@
 from elasticsearch import Elasticsearch
 from models.embeddings import EmbeddingModel
+import yaml
 
-Index = "products"
+
+with open("config.yaml") as f:
+    config = yaml.safe_load(f)
+
+Index = config['index']
 model = EmbeddingModel()
 
 try:
     es = Elasticsearch(
-        "http://localhost:9200"
+        config['base_url']
     )
 except Exception as e:
     print(e)

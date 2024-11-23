@@ -45,6 +45,13 @@ indexMapping = {
             "dims": 768,
             "index":True,
             "similarity":"l2_norm"
+        },
+
+        "ProductNameVecor":{
+            "type":"dense_vector",
+            "dims": 768,
+            "index":True,
+            "similarity":"l2_norm"
         }
     }
 }

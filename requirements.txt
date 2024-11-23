@@ -1,0 +1,4 @@
+elasticsearch 
+SentenceTransformer
+yaml
+streamlit
